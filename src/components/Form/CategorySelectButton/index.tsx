@@ -1,3 +1,4 @@
+import { RectButtonProps } from 'react-native-gesture-handler'
 import React from 'react'
 import {
     Container,
@@ -6,7 +7,6 @@ import {
     CategorySelected,
     IconFeather
 } from './styles'
-import { RectButtonProps } from 'react-native-gesture-handler'
 
 interface Props extends RectButtonProps {
     title: string

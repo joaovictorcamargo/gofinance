@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { categories } from '../../utils/categories';
+
 import {
     Container,
     Title,
@@ -9,7 +11,6 @@ import {
     Date,
     Icon
 } from './styles'
-import { categories } from '../../utils/categories'
 
 export interface CategoryProps {
     key: string
