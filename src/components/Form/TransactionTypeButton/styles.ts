@@ -31,7 +31,7 @@ export const Container = styled.View<ContainerProps>`
       background-color: ${({ theme }) => theme.colors.attention_light};
     `}
 `
-export const Icon = styled(Feather) <IconProps>`
+export const Icon = styled(Feather)<IconProps>`
   margin-right: 12px;
   font-size: ${RFValue(24)}px;
   color: ${({ theme, type }) =>

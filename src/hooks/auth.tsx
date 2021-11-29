@@ -1,4 +1,3 @@
-/*Contexto*/
 import React, {
     createContext,
     ReactNode,
@@ -12,7 +11,7 @@ const { REDIRECT_URI } = process.env
 import * as AuthSession from 'expo-auth-session'
 import * as AppleAuthentication from 'expo-apple-authentication'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-
+import { COLLECTION_USER } from '../config/database'
 
 interface AuthProviderProps {
     children: ReactNode
@@ -73,7 +72,7 @@ function AuthProvider({ children }: AuthProviderProps) {
                     photo: userInfo.picture ?? photo
                 }
                 setUser(userLogged)
-                await AsyncStorage.setItem(COLLECTION_USER, JSON.stringify(userLogged))
+        await AsyncStorage.setItem(COLLECTION_USER, JSON.stringify(userLogged))
             }
         } catch (e) {
             console.log(e)
